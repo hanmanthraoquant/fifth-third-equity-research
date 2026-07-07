@@ -27,7 +27,7 @@ A few things I learned:
 ✅ Fifth Third is a deposit/debit-led bank, NOT a credit-card lender (card book is only ~1.4% of loans)
 ✅ An all-stock deal is dilutive on day one but can be accretive once cost synergies land (+13.5% by 2027E here)
 
-All the code is open-source and reproducible (pulls live data with yfinance, has offline fallbacks): LINK
+All the code is open-source and reproducible (pulls live data with yfinance, has offline fallbacks): https://github.com/hanmanthraoquant/fifth-third-equity-research
 
 ⚠️ This is a learning/portfolio project — NOT investment advice.
 
