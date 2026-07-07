@@ -128,12 +128,12 @@ def _member_urn(token: str) -> str:
 
 
 def do_post(env: dict, text: str, dry: bool) -> None:
-    token = env.get("LINKEDIN_ACCESS_TOKEN")
-    if not token:
-        raise SystemExit("No LINKEDIN_ACCESS_TOKEN. Run: python linkedin_post.py --auth")
     if dry:
         print("--- DRY RUN (not posting) ---\n" + text + "\n--- end ---")
         return
+    token = env.get("LINKEDIN_ACCESS_TOKEN")
+    if not token:
+        raise SystemExit("No LINKEDIN_ACCESS_TOKEN. Run: python linkedin_post.py --auth")
     author = _member_urn(token)
     payload = {
         "author": author,
