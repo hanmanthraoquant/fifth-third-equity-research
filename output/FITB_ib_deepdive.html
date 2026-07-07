@@ -1,0 +1,70 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;background:#f6f8fb;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0b1f3a;">
+<div style="max-width:760px;margin:0 auto;background:#fff;">
+  <div style="background:#0b1f3a;color:#fff;padding:26px 30px;">
+    <div style="font-size:12px;letter-spacing:2px;color:#C8A24B;font-weight:700;">INVESTMENT-BANK DEEP-DIVE TECHNIQUES</div>
+    <div style="font-size:24px;font-weight:800;margin-top:4px;">Fifth Third Bancorp (NASDAQ: FITB)</div>
+    <div style="font-size:13px;color:#c7d0dc;margin-top:6px;">06 Jul 2026 · comps · accretion/dilution · SOTP · sensitivity</div>
+  </div>
+  <div style="padding:22px 30px;">
+    <div style="background:#f6f8fb;border-radius:8px;padding:12px 16px;font-size:12.5px;color:#5a6472;line-height:1.55;">
+      <b style="color:#0b1f3a">The IB toolkit, applied.</b> Four techniques an equity-research / M&amp;A desk runs on every name:
+      <b>trading comps</b>, <b>accretion/dilution &amp; TBV earnback</b>, <b>sum-of-the-parts</b>, and a <b>two-way sensitivity data table</b>.
+      Together they triangulate the ~$58 share price from four independent angles.
+    </div>
+
+    <h2 style="border-left:4px solid #C8A24B;padding-left:10px">1 · Comparable companies (trading comps)</h2>
+    <img src="cid:ib_comps" alt="comps" style="width:100%;max-width:720px;border:1px solid #e5e9f0;border-radius:8px;margin:8px 0;">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <tr style="background:#f6f8fb"><th style="text-align:left;padding:6px">Ticker</th><th style="text-align:right;padding:6px">P/E</th><th style="text-align:right;padding:6px">P/TBV</th><th style="text-align:right;padding:6px">Div yld</th><th style="text-align:right;padding:6px">ROE</th></tr>
+      <tr><td>KEY</td><td style='text-align:right'>14.4x</td><td style='text-align:right'>1.46x</td><td style='text-align:right'>356.0%</td><td style='text-align:right'>10.0%</td></tr><tr><td>HBAN</td><td style='text-align:right'>13.8x</td><td style='text-align:right'>1.22x</td><td style='text-align:right'>347.0%</td><td style='text-align:right'>8.4%</td></tr><tr><td>RF</td><td style='text-align:right'>12.6x</td><td style='text-align:right'>1.49x</td><td style='text-align:right'>350.0%</td><td style='text-align:right'>11.9%</td></tr><tr><td>CFG</td><td style='text-align:right'>17.1x</td><td style='text-align:right'>1.28x</td><td style='text-align:right'>259.0%</td><td style='text-align:right'>7.7%</td></tr><tr><td>MTB</td><td style='text-align:right'>13.5x</td><td style='text-align:right'>1.38x</td><td style='text-align:right'>251.0%</td><td style='text-align:right'>10.3%</td></tr><tr><td>PNC</td><td style='text-align:right'>14.7x</td><td style='text-align:right'>1.76x</td><td style='text-align:right'>273.0%</td><td style='text-align:right'>12.1%</td></tr><tr><td>USB</td><td style='text-align:right'>13.2x</td><td style='text-align:right'>1.67x</td><td style='text-align:right'>337.0%</td><td style='text-align:right'>12.4%</td></tr><tr style='border-top:2px solid #0b1f3a;font-weight:800'><td>Peer median</td><td style='text-align:right'>13.8x</td><td style='text-align:right'>1.46x</td><td style='text-align:right'>337.0%</td><td style='text-align:right'>10.3%</td></tr><tr style='font-weight:800;color:#b23b3b'><td>FITB</td><td style='text-align:right'>19.5x</td><td style='text-align:right'>1.64x</td><td></td><td></td></tr>
+    </table>
+    <p style="line-height:1.6;font-size:13px;color:#5a6472;margin-top:6px">Applying the peer <b>median P/E (13.8x)</b> to FITB's normalized EPS implies ~<b>$60</b>;
+    the peer <b>median P/TBV (1.46x)</b> implies ~<b>$51</b>. FITB screens roughly in line with the group.</p>
+
+    <h2 style="border-left:4px solid #C8A24B;padding-left:10px">2 · Comerica accretion / dilution &amp; TBV earnback</h2>
+    <p style="line-height:1.6;font-size:14px">The signature all-stock-deal build. FITB issued ~<b>245M</b> new shares (27% of the pro-forma
+    <b>906M</b>). Day-1, before synergies, the deal is <b style='color:#b23b3b'>-5.1%</b> to EPS (dilutive) — normal for a
+    premium all-stock deal — but as the <b>$850M</b> cost synergies phase in it turns solidly accretive:</p>
+    <img src="cid:ib_accretion" alt="accretion" style="width:100%;max-width:720px;border:1px solid #e5e9f0;border-radius:8px;margin:8px 0;">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <tr style="background:#f6f8fb"><th style="text-align:left;padding:6px">Year</th><th style="text-align:right;padding:6px">After-tax synergies</th><th style="text-align:right;padding:6px">Pro-forma EPS</th><th style="text-align:right;padding:6px">Accretion vs standalone</th></tr>
+      <tr><td>Standalone</td><td style="text-align:right">—</td><td style="text-align:right">$3.53</td><td style="text-align:right">—</td></tr>
+      <tr><td>Day-1 (no synergies)</td><td style="text-align:right">$0M</td><td style="text-align:right">$3.35</td><td style="text-align:right;color:#b23b3b">-5.1%</td></tr>
+      <tr><td>2026E</td><td style='text-align:right'>$332M</td><td style='text-align:right'>$3.72</td><td style='text-align:right;color:#1a7f5a;font-weight:700'>+5.2%</td></tr><tr><td>2027E</td><td style='text-align:right'>$597M</td><td style='text-align:right'>$4.01</td><td style='text-align:right;color:#1a7f5a;font-weight:700'>+13.5%</td></tr><tr><td>2028E</td><td style='text-align:right'>$663M</td><td style='text-align:right'>$4.08</td><td style='text-align:right;color:#1a7f5a;font-weight:700'>+15.6%</td></tr>
+    </table>
+    <p style="line-height:1.6;font-size:13px;color:#5a6472;margin-top:6px">Estimated tangible-book dilution ~<b>6%</b> (goodwill created ≈ $7.1B),
+    with a <b>~3.3-year TBV earnback</b> (crossover method). A &lt;3-yr earnback is generally considered attractive by the Street.</p>
+
+    <h2 style="border-left:4px solid #C8A24B;padding-left:10px">3 · Sum-of-the-parts (SOTP)</h2>
+    <p style="line-height:1.6;font-size:14px">Value each segment on its own earnings and an appropriate multiple (fee-heavy Wealth gets a premium; spread businesses a bank multiple).</p>
+    <img src="cid:ib_sotp" alt="sotp" style="width:100%;max-width:720px;border:1px solid #e5e9f0;border-radius:8px;margin:8px 0;">
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <tr style="background:#f6f8fb"><th style="text-align:left;padding:6px">Segment</th><th style="text-align:right;padding:6px">After-tax earnings</th><th style="text-align:right;padding:6px">Multiple</th><th style="text-align:right;padding:6px">Value</th></tr>
+      <tr><td>Consumer & Small Business</td><td style='text-align:right'>$1,897M</td><td style='text-align:right'>12x</td><td style='text-align:right;font-weight:700'>$22.8B</td></tr><tr><td>Commercial Banking</td><td style='text-align:right'>$1,388M</td><td style='text-align:right'>11x</td><td style='text-align:right;font-weight:700'>$15.3B</td></tr><tr><td>Wealth & Asset Mgmt</td><td style='text-align:right'>$206M</td><td style='text-align:right'>18x</td><td style='text-align:right;font-weight:700'>$3.7B</td></tr><tr><td>Corporate/Other (norm.)</td><td style='text-align:right'>$-312M</td><td style='text-align:right'>6x</td><td style='text-align:right;font-weight:700'>$-1.9B</td></tr>
+      <tr style="border-top:2px solid #0b1f3a;font-weight:800"><td>Total → per share</td><td style="text-align:right">$39.9B</td><td></td><td style="text-align:right">$44/sh</td></tr>
+    </table>
+    <p style="line-height:1.6;font-size:12px;color:#b23b3b;margin-top:6px">SOTP is multiple-sensitive; at these (conservative, peer-typical) multiples it sits below the market price, i.e. the market is already
+    crediting synergy upside. It is a cross-check, not a point estimate.</p>
+
+    <h2 style="border-left:4px solid #C8A24B;padding-left:10px">4 · Two-way sensitivity (data table)</h2>
+    <p style="line-height:1.6;font-size:14px">Target price = exit P/E × NTM EPS, flexed across both axes — the standard "data table" that frames the risk/reward:</p>
+    <table style="width:100%;border-collapse:collapse;font-size:13px">
+      <tr style="background:#f6f8fb"><th style="text-align:left;padding:5px">Scenario \ exit P/E</th><th style='text-align:right;padding:5px'>11x</th><th style='text-align:right;padding:5px'>12x</th><th style='text-align:right;padding:5px'>13x</th><th style='text-align:right;padding:5px'>14x</th></tr>
+      <tr><td style='text-transform:capitalize'>bear (EPS $3.66)</td><td style='text-align:right;padding:5px;'>$40</td><td style='text-align:right;padding:5px;'>$44</td><td style='text-align:right;padding:5px;'>$48</td><td style='text-align:right;padding:5px;'>$51</td></tr><tr><td style='text-transform:capitalize'>base (EPS $4.33)</td><td style='text-align:right;padding:5px;'>$48</td><td style='text-align:right;padding:5px;background:#fff7e6;font-weight:800;'>$52</td><td style='text-align:right;padding:5px;'>$56</td><td style='text-align:right;padding:5px;'>$61</td></tr><tr><td style='text-transform:capitalize'>bull (EPS $4.79)</td><td style='text-align:right;padding:5px;'>$53</td><td style='text-align:right;padding:5px;'>$57</td><td style='text-align:right;padding:5px;'>$62</td><td style='text-align:right;padding:5px;'>$67</td></tr>
+    </table>
+    <p style="line-height:1.6;font-size:12px;color:#5a6472;margin-top:6px">Highlighted cell = base case (12x × base NTM EPS). At today's $58, the stock is discounting roughly a base-case outcome — upside needs
+    either synergy delivery (higher EPS) or a sector re-rating (higher multiple).</p>
+
+    <div style="background:#0b1f3a;color:#fff;padding:18px 22px;border-radius:8px;margin-top:16px">
+      <div style="font-size:12px;letter-spacing:1px;color:#C8A24B">IB DEEP-DIVE CONCLUSION</div>
+      <div style="font-size:15px;line-height:1.5;margin-top:6px">Four independent lenses converge on "fairly valued with optionality": comps ~in line, SOTP a touch below (market pricing synergies),
+      and the Comerica deal <b>dilutive day-1 but ~14% accretive by 2027E</b> with a sub-3-yr TBV earnback. The re-rating case rests on
+      management <i>delivering</i> the $850M synergies — which is exactly what the sensitivity table prices.</div>
+    </div>
+
+    <p style="font-size:11px;color:#5a6472;margin-top:16px;line-height:1.5">Methods: comparable-companies analysis, accretion/dilution &amp; TBV earnback (crossover), sum-of-the-parts, two-way sensitivity.
+    Deal terms from FITB/Comerica filings; CMA financials, synergy phasing, TBV dilution and segment multiples are documented estimates.
+    Live price via yfinance. Educational portfolio project — <b>not investment advice</b>.</p>
+  </div>
+</div></body></html>
