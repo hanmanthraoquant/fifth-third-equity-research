@@ -17,6 +17,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 import urllib.parse
 import urllib.request
 import webbrowser
@@ -162,6 +163,11 @@ def main():
     ap.add_argument("--post", type=str, metavar="FILE", help="text file to publish")
     ap.add_argument("--dry-run", action="store_true", help="preview, do not publish")
     args = ap.parse_args()
+
+    try:  # emojis in the draft break the default Windows console codec
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
     env = load_env()
     if args.auth:
