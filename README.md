@@ -83,6 +83,17 @@ M&A: accretion/dilution & tangible-book earnback ·
 Yield: total capital-return (dividend + buyback) ·
 Frameworks: CAMELS, DuPont, horizontal / vertical (common-size) / rate-volume variance, CAPM cost of equity, bull/base/bear scenarios & two-way sensitivity.
 
+## Optional: publish the writeup to LinkedIn (official API)
+`DRAFT_linkedin_post.txt` is a ready-to-paste post. To publish it programmatically via
+LinkedIn's **official** OAuth + Posts API (ToS-compliant), see `LINKEDIN_API_SETUP.md`
+then:
+```bash
+python linkedin_post.py --auth                              # one-time OAuth
+python linkedin_post.py --post DRAFT_linkedin_post.txt --dry-run
+python linkedin_post.py --post DRAFT_linkedin_post.txt      # publish
+```
+Requires your own LinkedIn Developer app credentials (kept in a git-ignored `.env`).
+
 ## Quick start
 
 ```bash
